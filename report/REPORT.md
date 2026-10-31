@@ -68,7 +68,7 @@ A stated headline is not a checked proof. Machine-checked so far, with Comparato
 | FTL712 critical percolation on ℤ³ | CriticalZ3 | PASS | PASS (187 s) |
 | FTL714 Heisenberg ferromagnet | Heisenberg | PASS | PASS (1,169 s) |
 | FTL713 no percolation at criticality, quasi-transitive | CriticalPercolation | PASS | PASS (825 s) |
-| DOC0275 Laughlin Fock-space gap | LaughlinFock | PASS | running |
+| DOC0275 Laughlin Fock-space gap | LaughlinFock | PASS | PASS (4,109 s) |
 
 All four statements are unchanged at HEAD and this review judged them faithful. No second kernel (nanoda) was run.
 Further Comparator checks of the other challenges judged faithful (367 at the snapshot commit) are running on both

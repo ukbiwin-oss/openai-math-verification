@@ -23,7 +23,7 @@ Comparator's landrun sandbox with only the standard axioms (`propext`, `Quot.sou
 | `CriticalZ3` | no infinite cluster at p_c for bond and site percolation on ℤ³ | PASS (200 s) | PASS (187 s) |
 | `Heisenberg` | spontaneous magnetisation of the quantum Heisenberg ferromagnet, d ≥ 3, every spin | PASS (836 s) | PASS (1,169 s) |
 | `CriticalPercolation` | no percolation at criticality on every quasi-transitive graph with p_c < 1 | PASS (690 s) | PASS (825 s) |
-| `LaughlinFock` | uniform Fock-space inequality behind the Laughlin spectral gap | PASS (4,049 s) | running |
+| `LaughlinFock` | uniform Fock-space inequality behind the Laughlin spectral gap | PASS (4,049 s) | PASS (4,109 s) |
 
 Library: openai/math at commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`; the four challenge files are unchanged at
 the later head `4eaee875`. Toolchain: Lean 4.34.1 (`5045d005`), Mathlib `d13f23b7`, Comparator `d03acab1` (v4.34.0),
