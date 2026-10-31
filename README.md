@@ -43,3 +43,10 @@ lean4export v4.34.0, landrun 0.1.17.
 blobs, kinds and editions, the three withdrawals, the collection's own formalisation claims, a review of whether each
 Lean statement captures its paper's headline (719 current manuscripts), and a check of public reception for 45 headline
 claims with every cited source re-fetched. It is an audit, not new mathematics, and contains no peer review.
+
+## Licence
+
+The report, the per-manuscript table, the replication summaries and logs, and this README are licensed under
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (`LICENSE`): you may
+share and adapt them with credit to Lee Miller. The script in `scripts/` is under the MIT licence (`scripts/LICENSE`).
+Titles and paths of the upstream manuscripts refer to github.com/openai/math, which is licensed by OpenAI under Apache-2.0.
