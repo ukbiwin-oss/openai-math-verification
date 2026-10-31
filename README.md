@@ -1,5 +1,7 @@
 # Independent checks of the openai/math release
 
+_By Lee Miller ([@ukbiwin-oss](https://github.com/ukbiwin-oss)), with Claude Code._
+
 This repository records an independent look at [github.com/openai/math](https://github.com/openai/math), OpenAI's
 September–October 2026 release of AI-generated mathematics manuscripts with Lean formalisations.
 

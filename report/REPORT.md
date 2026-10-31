@@ -1,6 +1,6 @@
 # Verification of the openai/math records in the library — report (2026-10-30)
 
-_Prepared with Claude Code. Per-paper results: `papers.csv` (one row per manuscript, keyed by its path in the upstream repository). Identifiers such as FTL712 or DOC0275 are record IDs in the author's private research catalogue._
+_By Lee Miller, prepared with Claude Code. Per-paper results: `papers.csv` (one row per manuscript, keyed by its path in the upstream repository). Identifiers such as FTL712 or DOC0275 are record IDs in Lee Miller's private research catalogue._
 
 ## 1. Answer
 
@@ -9,7 +9,7 @@ They are AI-generated, not peer-reviewed mathematics manuscripts plus supplement
 an unnamed internal OpenAI model produced them, that they are "raw research data", that unformalised results "could
 have issues", and its `formalization.yaml` gives review status `unchecked`. Their mathematical standing varies widely
 and is now recorded per record. Where a Lean statement exists we checked whether it says what the paper claims; no proof
-was compiled in this audit. Four statements had already passed the author's own Comparator runs on 10–11 October.
+was compiled in this audit. Four statements had already passed Lee Miller's own Comparator runs on 10–11 October.
 
 ## 2. Identity and integrity (all 787 records)
 
@@ -63,7 +63,7 @@ meaning the reviewers could not fully confirm (flag `custom_definitions_unclear`
 
 A stated headline is not a checked proof. Machine-checked so far, with Comparator in the landrun sandbox:
 
-| Record | Challenge | the author's run (machine-1, 10–11 Oct) | Independent replication (laptop machine-2, fresh GitHub copy, 30–31 Oct) |
+| Record | Challenge | Lee Miller's run (machine-1, 10–11 Oct) | Independent replication (laptop machine-2, fresh GitHub copy, 30–31 Oct) |
 |---|---|---|---|
 | FTL712 critical percolation on ℤ³ | CriticalZ3 | PASS | PASS (187 s) |
 | FTL714 Heisenberg ferromagnet | Heisenberg | PASS | PASS (1,169 s) |
@@ -73,7 +73,7 @@ A stated headline is not a checked proof. Machine-checked so far, with Comparato
 All four statements are unchanged at HEAD and this review judged them faithful. No second kernel (nanoda) was run.
 Further Comparator checks of the other challenges judged faithful (367 at the snapshot commit) are running on both
 machines; results accumulate in `~/comparator-replication-20261031/run/summary.csv` (machine-1) and
-`~/comparator-replication-20261030/run{2,3,4}/summary.csv` (laptop). the author's 10 Oct desk audit flagged families 263
+`~/comparator-replication-20261030/run{2,3,4}/summary.csv` (laptop). Lee Miller's 10 Oct desk audit flagged families 263
 (ionization: the statement is not N_c ≤ Z + C), 267 (Bose gas: zero temperature only) and 261 (Anderson: spectrum only).
 
 ## 5. The eight FTL records and the quantum-computing titles
