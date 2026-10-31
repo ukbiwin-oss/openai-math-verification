@@ -1,0 +1,114 @@
+warning: PrimeNumberTheoremAnd: repository '$ROOT/work/lean/.lake/packages/PrimeNumberTheoremAnd' has local changes
+warning: belyi: repository '$ROOT/work/lean/.lake/packages/belyi' has local changes
+warning: formal-schemes: repository '$ROOT/work/lean/.lake/packages/formal-schemes' has local changes
+warning: elliptic-curves: repository '$ROOT/work/lean/.lake/packages/elliptic-curves' has local changes
+warning: tempered-fundamental-groups: repository '$ROOT/work/lean/.lake/packages/tempered-fundamental-groups' has local changes
+warning: oka: repository '$ROOT/work/lean/.lake/packages/oka' has local changes
+warning: orbicurve-cores: repository '$ROOT/work/lean/.lake/packages/orbicurve-cores' has local changes
+warning: pi1: repository '$ROOT/work/lean/.lake/packages/pi1' has local changes
+warning: heights: repository '$ROOT/work/lean/.lake/packages/heights' has local changes
+warning: genl: repository '$ROOT/work/lean/.lake/packages/genl' has local changes
+warning: tate-curves-theta: repository '$ROOT/work/lean/.lake/packages/tate-curves-theta' has local changes
+warning: iut: repository '$ROOT/work/lean/.lake/packages/iut' has local changes
+warning: gromov: repository '$ROOT/work/lean/.lake/packages/gromov' has local changes
+warning: SphereEversion: repository '$ROOT/work/lean/.lake/packages/SphereEversion' has local changes
+warning: schoenflies-lean: repository '$ROOT/work/lean/.lake/packages/schoenflies-lean' has local changes
+warning: ClassFieldTheory: repository '$ROOT/work/lean/.lake/packages/ClassFieldTheory' has local changes
+warning: AINTLIB: repository '$ROOT/work/lean/.lake/packages/AINTLIB' has local changes
+warning: AbsorptionCutoff: repository '$ROOT/work/lean/.lake/packages/AbsorptionCutoff' has local changes
+warning: StrongPNT: repository '$ROOT/work/lean/.lake/packages/StrongPNT' has local changes
+warning: carleson: repository '$ROOT/work/lean/.lake/packages/carleson' has local changes
+warning: rellich-kondrachov: repository '$ROOT/work/lean/.lake/packages/rellich-kondrachov' has local changes
+warning: Zeta3Irrational: repository '$ROOT/work/lean/.lake/packages/Zeta3Irrational' has local changes
+warning: fixed-point-theorems: repository '$ROOT/work/lean/.lake/packages/fixed-point-theorems' has local changes
+Building ComparatorChallenges.CriticalZ3
+warning: PrimeNumberTheoremAnd: repository '$ROOT/work/lean/.lake/packages/PrimeNumberTheoremAnd' has local changes
+warning: belyi: repository '$ROOT/work/lean/.lake/packages/belyi' has local changes
+warning: formal-schemes: repository '$ROOT/work/lean/.lake/packages/formal-schemes' has local changes
+warning: elliptic-curves: repository '$ROOT/work/lean/.lake/packages/elliptic-curves' has local changes
+warning: tempered-fundamental-groups: repository '$ROOT/work/lean/.lake/packages/tempered-fundamental-groups' has local changes
+warning: oka: repository '$ROOT/work/lean/.lake/packages/oka' has local changes
+warning: orbicurve-cores: repository '$ROOT/work/lean/.lake/packages/orbicurve-cores' has local changes
+warning: pi1: repository '$ROOT/work/lean/.lake/packages/pi1' has local changes
+warning: heights: repository '$ROOT/work/lean/.lake/packages/heights' has local changes
+warning: genl: repository '$ROOT/work/lean/.lake/packages/genl' has local changes
+warning: tate-curves-theta: repository '$ROOT/work/lean/.lake/packages/tate-curves-theta' has local changes
+warning: iut: repository '$ROOT/work/lean/.lake/packages/iut' has local changes
+warning: gromov: repository '$ROOT/work/lean/.lake/packages/gromov' has local changes
+warning: SphereEversion: repository '$ROOT/work/lean/.lake/packages/SphereEversion' has local changes
+warning: schoenflies-lean: repository '$ROOT/work/lean/.lake/packages/schoenflies-lean' has local changes
+warning: ClassFieldTheory: repository '$ROOT/work/lean/.lake/packages/ClassFieldTheory' has local changes
+warning: AINTLIB: repository '$ROOT/work/lean/.lake/packages/AINTLIB' has local changes
+warning: AbsorptionCutoff: repository '$ROOT/work/lean/.lake/packages/AbsorptionCutoff' has local changes
+warning: StrongPNT: repository '$ROOT/work/lean/.lake/packages/StrongPNT' has local changes
+warning: carleson: repository '$ROOT/work/lean/.lake/packages/carleson' has local changes
+warning: rellich-kondrachov: repository '$ROOT/work/lean/.lake/packages/rellich-kondrachov' has local changes
+warning: Zeta3Irrational: repository '$ROOT/work/lean/.lake/packages/Zeta3Irrational' has local changes
+warning: fixed-point-theorems: repository '$ROOT/work/lean/.lake/packages/fixed-point-theorems' has local changes
+⚠ [8924/8924] Built ComparatorChallenges.CriticalZ3 (2.0s)
+warning: ComparatorChallenges/CriticalZ3.lean:56:8: declaration uses `sorry`
+Build completed successfully (8924 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, OAI.CriticalZ3.critical_no_infinite, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from ComparatorChallenges.CriticalZ3
+Building OAI.Probability.CriticalZ3.Main
+warning: PrimeNumberTheoremAnd: repository '$ROOT/work/lean/.lake/packages/PrimeNumberTheoremAnd' has local changes
+warning: belyi: repository '$ROOT/work/lean/.lake/packages/belyi' has local changes
+warning: formal-schemes: repository '$ROOT/work/lean/.lake/packages/formal-schemes' has local changes
+warning: elliptic-curves: repository '$ROOT/work/lean/.lake/packages/elliptic-curves' has local changes
+warning: tempered-fundamental-groups: repository '$ROOT/work/lean/.lake/packages/tempered-fundamental-groups' has local changes
+warning: oka: repository '$ROOT/work/lean/.lake/packages/oka' has local changes
+warning: orbicurve-cores: repository '$ROOT/work/lean/.lake/packages/orbicurve-cores' has local changes
+warning: pi1: repository '$ROOT/work/lean/.lake/packages/pi1' has local changes
+warning: heights: repository '$ROOT/work/lean/.lake/packages/heights' has local changes
+warning: genl: repository '$ROOT/work/lean/.lake/packages/genl' has local changes
+warning: tate-curves-theta: repository '$ROOT/work/lean/.lake/packages/tate-curves-theta' has local changes
+warning: iut: repository '$ROOT/work/lean/.lake/packages/iut' has local changes
+warning: gromov: repository '$ROOT/work/lean/.lake/packages/gromov' has local changes
+warning: SphereEversion: repository '$ROOT/work/lean/.lake/packages/SphereEversion' has local changes
+warning: schoenflies-lean: repository '$ROOT/work/lean/.lake/packages/schoenflies-lean' has local changes
+warning: ClassFieldTheory: repository '$ROOT/work/lean/.lake/packages/ClassFieldTheory' has local changes
+warning: AINTLIB: repository '$ROOT/work/lean/.lake/packages/AINTLIB' has local changes
+warning: AbsorptionCutoff: repository '$ROOT/work/lean/.lake/packages/AbsorptionCutoff' has local changes
+warning: StrongPNT: repository '$ROOT/work/lean/.lake/packages/StrongPNT' has local changes
+warning: carleson: repository '$ROOT/work/lean/.lake/packages/carleson' has local changes
+warning: rellich-kondrachov: repository '$ROOT/work/lean/.lake/packages/rellich-kondrachov' has local changes
+warning: Zeta3Irrational: repository '$ROOT/work/lean/.lake/packages/Zeta3Irrational' has local changes
+warning: fixed-point-theorems: repository '$ROOT/work/lean/.lake/packages/fixed-point-theorems' has local changes
+✔ [8924/8957] Built OAI.Probability.CriticalZ3.Model (2.8s)
+✔ [8925/8957] Built OAI.Probability.CriticalZ3.Basic (3.5s)
+✔ [8926/8957] Built OAI.Probability.CriticalZ3.ProductCylinder (3.5s)
+✔ [8927/8957] Built OAI.Probability.CriticalZ3.Symmetry (3.3s)
+✔ [8928/8957] Built OAI.Probability.CriticalZ3.QuarterFaces (3.5s)
+✔ [8929/8957] Built OAI.Probability.CriticalZ3.Resampling (3.2s)
+✔ [8930/8957] Built OAI.Probability.CriticalZ3.HyperedgeComparison (4.9s)
+✔ [8931/8957] Built OAI.Probability.CriticalZ3.LatticeGraph (3.2s)
+✔ [8932/8957] Built OAI.Probability.CriticalZ3.BoxGeometry (3.5s)
+✔ [8933/8957] Built OAI.Probability.CriticalZ3.LatticePaths (3.1s)
+✔ [8934/8957] Built OAI.Probability.CriticalZ3.EntryLayers (3.1s)
+✔ [8935/8957] Built OAI.Probability.CriticalZ3.SeedTrials (3.1s)
+✔ [8936/8957] Built OAI.Probability.CriticalZ3.Conditioning (3.4s)
+✔ [8937/8957] Built OAI.Probability.CriticalZ3.ConditionalQuality (3.2s)
+✔ [8938/8957] Built OAI.Probability.CriticalZ3.TrialCounts (3.3s)
+✔ [8939/8957] Built OAI.Probability.CriticalZ3.ShellProbability (3.3s)
+✔ [8940/8957] Built OAI.Probability.CriticalZ3.SeedQuality (3.2s)
+✔ [8941/8957] Built OAI.Probability.CriticalZ3.Extension (3.3s)
+✔ [8942/8957] Built OAI.Probability.CriticalZ3.Scales (4.5s)
+✔ [8943/8957] Built OAI.Probability.CriticalZ3.Relay (3.9s)
+✔ [8944/8957] Built OAI.Probability.CriticalZ3.RelayProbability (3.6s)
+✔ [8945/8957] Built OAI.Probability.CriticalZ3.FiniteTrails (3.1s)
+✔ [8946/8957] Built OAI.Probability.CriticalZ3.PlanarBoundary (6.2s)
+✔ [8947/8957] Built OAI.Probability.CriticalZ3.Matching (3.2s)
+✔ [8948/8957] Built OAI.Probability.CriticalZ3.Peierls (3.3s)
+✔ [8949/8957] Built OAI.Probability.CriticalZ3.Coarse (3.9s)
+✔ [8950/8957] Built OAI.Probability.CriticalZ3.AdaptiveReveals (3.3s)
+✔ [8951/8957] Built OAI.Probability.CriticalZ3.Exploration (3.3s)
+✔ [8952/8957] Built OAI.Probability.CriticalZ3.ExplorationInvariant (3.8s)
+✔ [8953/8957] Built OAI.Probability.CriticalZ3.ExplorationProbability (3.4s)
+✔ [8954/8957] Built OAI.Probability.CriticalZ3.ExplorationConnectivity (4.1s)
+✔ [8955/8957] Built OAI.Probability.CriticalZ3.ExplorationSurvival (3.4s)
+✔ [8956/8957] Built OAI.Probability.CriticalZ3.Subunit (3.5s)
+✔ [8957/8957] Built OAI.Probability.CriticalZ3.Main (3.0s)
+Build completed successfully (8957 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, OAI.CriticalZ3.critical_no_infinite, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from OAI.Probability.CriticalZ3.Main
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

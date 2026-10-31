@@ -1,0 +1,4 @@
+challenge,exit_code,verdict,start_utc,end_utc,seconds
+CriticalZ3,0,PASS,2026-10-30T20:07:01Z,2026-10-30T20:10:08Z,187
+Heisenberg,0,PASS,2026-10-30T20:10:08Z,2026-10-30T20:29:37Z,1169
+CriticalPercolation,0,PASS,2026-10-30T20:23:08Z,2026-10-30T20:36:53Z,825

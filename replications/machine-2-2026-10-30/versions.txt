@@ -1,0 +1,9 @@
+date: Fri 30 Oct 20:07:01 UTC 2026
+host: machine-2, kernel 7.0.0-42-generic
+library: $ROOT/sources/openai-math/lean (openai/math commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb)
+lean: Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+lake: Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)
+mathlib: d13f23b723b8a846827a245b89c10fc7d3f11612
+lean4export: 076e8e57707e813375e8f9da8bf989799ace9680 (v4.34.0)
+comparator: d03acab154d269c06e60e4de7e4cc85deebff94b (v4.34.0)
+landrun: landrun version 0.1.17

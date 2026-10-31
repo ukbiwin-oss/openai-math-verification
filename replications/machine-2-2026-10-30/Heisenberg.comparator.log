@@ -1,0 +1,208 @@
+warning: PrimeNumberTheoremAnd: repository '$ROOT/work/lean/.lake/packages/PrimeNumberTheoremAnd' has local changes
+warning: belyi: repository '$ROOT/work/lean/.lake/packages/belyi' has local changes
+warning: formal-schemes: repository '$ROOT/work/lean/.lake/packages/formal-schemes' has local changes
+warning: elliptic-curves: repository '$ROOT/work/lean/.lake/packages/elliptic-curves' has local changes
+warning: tempered-fundamental-groups: repository '$ROOT/work/lean/.lake/packages/tempered-fundamental-groups' has local changes
+warning: oka: repository '$ROOT/work/lean/.lake/packages/oka' has local changes
+warning: orbicurve-cores: repository '$ROOT/work/lean/.lake/packages/orbicurve-cores' has local changes
+warning: pi1: repository '$ROOT/work/lean/.lake/packages/pi1' has local changes
+warning: heights: repository '$ROOT/work/lean/.lake/packages/heights' has local changes
+warning: genl: repository '$ROOT/work/lean/.lake/packages/genl' has local changes
+warning: tate-curves-theta: repository '$ROOT/work/lean/.lake/packages/tate-curves-theta' has local changes
+warning: iut: repository '$ROOT/work/lean/.lake/packages/iut' has local changes
+warning: gromov: repository '$ROOT/work/lean/.lake/packages/gromov' has local changes
+warning: SphereEversion: repository '$ROOT/work/lean/.lake/packages/SphereEversion' has local changes
+warning: schoenflies-lean: repository '$ROOT/work/lean/.lake/packages/schoenflies-lean' has local changes
+warning: ClassFieldTheory: repository '$ROOT/work/lean/.lake/packages/ClassFieldTheory' has local changes
+warning: AINTLIB: repository '$ROOT/work/lean/.lake/packages/AINTLIB' has local changes
+warning: AbsorptionCutoff: repository '$ROOT/work/lean/.lake/packages/AbsorptionCutoff' has local changes
+warning: StrongPNT: repository '$ROOT/work/lean/.lake/packages/StrongPNT' has local changes
+warning: carleson: repository '$ROOT/work/lean/.lake/packages/carleson' has local changes
+warning: rellich-kondrachov: repository '$ROOT/work/lean/.lake/packages/rellich-kondrachov' has local changes
+warning: Zeta3Irrational: repository '$ROOT/work/lean/.lake/packages/Zeta3Irrational' has local changes
+warning: fixed-point-theorems: repository '$ROOT/work/lean/.lake/packages/fixed-point-theorems' has local changes
+Building ComparatorChallenges.Heisenberg
+warning: PrimeNumberTheoremAnd: repository '$ROOT/work/lean/.lake/packages/PrimeNumberTheoremAnd' has local changes
+warning: belyi: repository '$ROOT/work/lean/.lake/packages/belyi' has local changes
+warning: formal-schemes: repository '$ROOT/work/lean/.lake/packages/formal-schemes' has local changes
+warning: elliptic-curves: repository '$ROOT/work/lean/.lake/packages/elliptic-curves' has local changes
+warning: tempered-fundamental-groups: repository '$ROOT/work/lean/.lake/packages/tempered-fundamental-groups' has local changes
+warning: oka: repository '$ROOT/work/lean/.lake/packages/oka' has local changes
+warning: orbicurve-cores: repository '$ROOT/work/lean/.lake/packages/orbicurve-cores' has local changes
+warning: pi1: repository '$ROOT/work/lean/.lake/packages/pi1' has local changes
+warning: heights: repository '$ROOT/work/lean/.lake/packages/heights' has local changes
+warning: genl: repository '$ROOT/work/lean/.lake/packages/genl' has local changes
+warning: tate-curves-theta: repository '$ROOT/work/lean/.lake/packages/tate-curves-theta' has local changes
+warning: iut: repository '$ROOT/work/lean/.lake/packages/iut' has local changes
+warning: gromov: repository '$ROOT/work/lean/.lake/packages/gromov' has local changes
+warning: SphereEversion: repository '$ROOT/work/lean/.lake/packages/SphereEversion' has local changes
+warning: schoenflies-lean: repository '$ROOT/work/lean/.lake/packages/schoenflies-lean' has local changes
+warning: ClassFieldTheory: repository '$ROOT/work/lean/.lake/packages/ClassFieldTheory' has local changes
+warning: AINTLIB: repository '$ROOT/work/lean/.lake/packages/AINTLIB' has local changes
+warning: AbsorptionCutoff: repository '$ROOT/work/lean/.lake/packages/AbsorptionCutoff' has local changes
+warning: StrongPNT: repository '$ROOT/work/lean/.lake/packages/StrongPNT' has local changes
+warning: carleson: repository '$ROOT/work/lean/.lake/packages/carleson' has local changes
+warning: rellich-kondrachov: repository '$ROOT/work/lean/.lake/packages/rellich-kondrachov' has local changes
+warning: Zeta3Irrational: repository '$ROOT/work/lean/.lake/packages/Zeta3Irrational' has local changes
+warning: fixed-point-theorems: repository '$ROOT/work/lean/.lake/packages/fixed-point-theorems' has local changes
+⚠ [8924/8924] Built ComparatorChallenges.Heisenberg (21s)
+warning: ComparatorChallenges/Heisenberg.lean:206:8: declaration uses `sorry`
+Build completed successfully (8924 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, OAI.Heisenberg.spontaneous_magnetization, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from ComparatorChallenges.Heisenberg
+Building OAI.MathematicalPhysics.Heisenberg.Main
+warning: PrimeNumberTheoremAnd: repository '$ROOT/work/lean/.lake/packages/PrimeNumberTheoremAnd' has local changes
+warning: belyi: repository '$ROOT/work/lean/.lake/packages/belyi' has local changes
+warning: formal-schemes: repository '$ROOT/work/lean/.lake/packages/formal-schemes' has local changes
+warning: elliptic-curves: repository '$ROOT/work/lean/.lake/packages/elliptic-curves' has local changes
+warning: tempered-fundamental-groups: repository '$ROOT/work/lean/.lake/packages/tempered-fundamental-groups' has local changes
+warning: oka: repository '$ROOT/work/lean/.lake/packages/oka' has local changes
+warning: orbicurve-cores: repository '$ROOT/work/lean/.lake/packages/orbicurve-cores' has local changes
+warning: pi1: repository '$ROOT/work/lean/.lake/packages/pi1' has local changes
+warning: heights: repository '$ROOT/work/lean/.lake/packages/heights' has local changes
+warning: genl: repository '$ROOT/work/lean/.lake/packages/genl' has local changes
+warning: tate-curves-theta: repository '$ROOT/work/lean/.lake/packages/tate-curves-theta' has local changes
+warning: iut: repository '$ROOT/work/lean/.lake/packages/iut' has local changes
+warning: gromov: repository '$ROOT/work/lean/.lake/packages/gromov' has local changes
+warning: SphereEversion: repository '$ROOT/work/lean/.lake/packages/SphereEversion' has local changes
+warning: schoenflies-lean: repository '$ROOT/work/lean/.lake/packages/schoenflies-lean' has local changes
+warning: ClassFieldTheory: repository '$ROOT/work/lean/.lake/packages/ClassFieldTheory' has local changes
+warning: AINTLIB: repository '$ROOT/work/lean/.lake/packages/AINTLIB' has local changes
+warning: AbsorptionCutoff: repository '$ROOT/work/lean/.lake/packages/AbsorptionCutoff' has local changes
+warning: StrongPNT: repository '$ROOT/work/lean/.lake/packages/StrongPNT' has local changes
+warning: carleson: repository '$ROOT/work/lean/.lake/packages/carleson' has local changes
+warning: rellich-kondrachov: repository '$ROOT/work/lean/.lake/packages/rellich-kondrachov' has local changes
+warning: Zeta3Irrational: repository '$ROOT/work/lean/.lake/packages/Zeta3Irrational' has local changes
+warning: fixed-point-theorems: repository '$ROOT/work/lean/.lake/packages/fixed-point-theorems' has local changes
+✔ [8924/9051] Built OAI.MathematicalPhysics.Heisenberg.Model (22s)
+✔ [8925/9051] Built OAI.MathematicalPhysics.Heisenberg.LocalAlgebra (19s)
+✔ [8926/9051] Built OAI.MathematicalPhysics.Heisenberg.ExponentialEvolution (6.5s)
+✔ [8927/9051] Built OAI.MathematicalPhysics.Heisenberg.LocalDynamics (7.3s)
+✔ [8928/9051] Built OAI.MathematicalPhysics.Heisenberg.ThermodynamicDynamics (8.6s)
+✔ [8929/9051] Built OAI.MathematicalPhysics.Heisenberg.StateCompactness (14s)
+✔ [8930/9051] Built OAI.MathematicalPhysics.Heisenberg.BoundedStrip (3.9s)
+✔ [8931/9051] Built OAI.MathematicalPhysics.Heisenberg.GibbsLimits (6.7s)
+✔ [8932/9051] Built OAI.MathematicalPhysics.Heisenberg.TensorUnitSystem (3.1s)
+✔ [8933/9051] Built OAI.MathematicalPhysics.Heisenberg.MatrixUnitLift (3.1s)
+✔ [8934/9051] Built OAI.MathematicalPhysics.Heisenberg.TensorLift (3.1s)
+✔ [8935/9051] Built OAI.MathematicalPhysics.Heisenberg.DeterminantExposure (3.4s)
+✔ [8936/9051] Built OAI.MathematicalPhysics.Heisenberg.FirstReturns (3.5s)
+✔ [8937/9051] Built OAI.MathematicalPhysics.Heisenberg.ConditionalMoments (3.4s)
+✔ [8938/9051] Built OAI.MathematicalPhysics.Heisenberg.ExchangeDeterminants (3.8s)
+✔ [8939/9051] Built OAI.MathematicalPhysics.Heisenberg.ExchangeCycles (3.6s)
+✔ [8940/9051] Built OAI.MathematicalPhysics.Heisenberg.FiniteHistories (3.6s)
+✔ [8941/9051] Built OAI.MathematicalPhysics.Heisenberg.LayerExposure (3.4s)
+✔ [8942/9051] Built OAI.MathematicalPhysics.Heisenberg.HittingKernels (3.6s)
+✔ [8943/9051] Built OAI.MathematicalPhysics.Heisenberg.HittingEnergy (3.5s)
+✔ [8944/9051] Built OAI.MathematicalPhysics.Heisenberg.ReturnConditioning (3.5s)
+✔ [8945/9051] Built OAI.MathematicalPhysics.Heisenberg.LayerEnergy (4.0s)
+✔ [8946/9051] Built OAI.MathematicalPhysics.Heisenberg.KilledContractions (4.0s)
+✔ [8947/9051] Built OAI.MathematicalPhysics.Heisenberg.QuietSweeps (3.8s)
+✔ [8948/9051] Built OAI.MathematicalPhysics.Heisenberg.ExposedEnergy (4.6s)
+✔ [8949/9051] Built OAI.MathematicalPhysics.Heisenberg.CycleWeights (4.5s)
+✔ [8950/9051] Built OAI.MathematicalPhysics.Heisenberg.LatticePaths (3.7s)
+✔ [8951/9051] Built OAI.MathematicalPhysics.Heisenberg.LatticeCuts (4.3s)
+✔ [8952/9051] Built OAI.MathematicalPhysics.Heisenberg.LatticeHulls (3.2s)
+✔ [8953/9051] Built OAI.MathematicalPhysics.Heisenberg.HullComponents (3.8s)
+✔ [8954/9051] Built OAI.MathematicalPhysics.Heisenberg.HullRouting (3.5s)
+✔ [8955/9051] Built OAI.MathematicalPhysics.Heisenberg.RegularComponents (3.0s)
+✔ [8956/9051] Built OAI.MathematicalPhysics.Heisenberg.RoutedNetworks (3.8s)
+✔ [8957/9051] Built OAI.MathematicalPhysics.Heisenberg.NetworkEnergy (6.4s)
+✔ [8958/9051] Built OAI.MathematicalPhysics.Heisenberg.LatticeFlows (3.8s)
+✔ [8959/9051] Built OAI.MathematicalPhysics.Heisenberg.FlowRouting (4.3s)
+✔ [8960/9051] Built OAI.MathematicalPhysics.Heisenberg.FlowCongestion (3.0s)
+✔ [8961/9051] Built OAI.MathematicalPhysics.Heisenberg.SparseEnergy (4.7s)
+✔ [8962/9051] Built OAI.MathematicalPhysics.Heisenberg.RegularKernels (4.4s)
+✔ [8963/9051] Built OAI.MathematicalPhysics.Heisenberg.RoutedDissipation (4.1s)
+✔ [8964/9051] Built OAI.MathematicalPhysics.Heisenberg.WeightedLeakage (4.4s)
+✔ [8965/9051] Built OAI.MathematicalPhysics.Heisenberg.MeanLeakage (5.0s)
+✔ [8966/9051] Built OAI.MathematicalPhysics.Heisenberg.RoundEnergy (4.7s)
+✔ [8967/9051] Built OAI.MathematicalPhysics.Heisenberg.CyclicEnergy (4.3s)
+✔ [8968/9051] Built OAI.MathematicalPhysics.Heisenberg.HistoryMarginals (4.3s)
+✔ [8969/9051] Built OAI.MathematicalPhysics.Heisenberg.ClockWitnesses (3.9s)
+✔ [8970/9051] Built OAI.MathematicalPhysics.Heisenberg.ClockInsertions (4.0s)
+✔ [8971/9051] Built OAI.MathematicalPhysics.Heisenberg.SpatialClocks (4.2s)
+✔ [8972/9051] Built OAI.MathematicalPhysics.Heisenberg.SparseCrossings (4.4s)
+✔ [8973/9051] Built OAI.MathematicalPhysics.Heisenberg.CrossingTails (4.8s)
+✔ [8974/9051] Built OAI.MathematicalPhysics.Heisenberg.LatticeRegularity (4.8s)
+✔ [8975/9051] Built OAI.MathematicalPhysics.Heisenberg.LayerRegularity (4.0s)
+✔ [8976/9051] Built OAI.MathematicalPhysics.Heisenberg.ClockTails (3.8s)
+✔ [8977/9051] Built OAI.MathematicalPhysics.Heisenberg.HoleReturns (3.0s)
+✔ [8978/9051] Built OAI.MathematicalPhysics.Heisenberg.AveragedEnergy (4.4s)
+✔ [8979/9051] Built OAI.MathematicalPhysics.Heisenberg.CutContractions (5.3s)
+✔ [8980/9051] Built OAI.MathematicalPhysics.Heisenberg.ScheduledResiduals (5.6s)
+✔ [8981/9051] Built OAI.MathematicalPhysics.Heisenberg.ReversedExposure (3.7s)
+✔ [8982/9051] Built OAI.MathematicalPhysics.Heisenberg.PeriodicLeakage (4.0s)
+✔ [8983/9051] Built OAI.MathematicalPhysics.Heisenberg.PolynomialLimits (3.8s)
+✔ [8984/9051] Built OAI.MathematicalPhysics.Heisenberg.StablePolynomials (3.7s)
+✔ [8985/9051] Built OAI.MathematicalPhysics.Heisenberg.StableSections (4.4s)
+✔ [8986/9051] Built OAI.MathematicalPhysics.Heisenberg.PinSymmetrization (7.4s)
+✔ [8987/9051] Built OAI.MathematicalPhysics.Heisenberg.PermutationSymbols (6.7s)
+✔ [8988/9051] Built OAI.MathematicalPhysics.Heisenberg.PinSplicing (7.4s)
+✔ [8989/9051] Built OAI.MathematicalPhysics.Heisenberg.StablePinLaw (6.7s)
+✔ [8990/9051] Built OAI.MathematicalPhysics.Heisenberg.SimultaneousPins (6.0s)
+✔ [8991/9051] Built OAI.MathematicalPhysics.Heisenberg.PinDensity (6.9s)
+✔ [8992/9051] Built OAI.MathematicalPhysics.Heisenberg.TwoEndedReturns (7.2s)
+✔ [8993/9051] Built OAI.MathematicalPhysics.Heisenberg.BoundaryWitness (6.3s)
+✔ [8994/9051] Built OAI.MathematicalPhysics.Heisenberg.BoundaryPartition (5.8s)
+✔ [8995/9051] Built OAI.MathematicalPhysics.Heisenberg.SlotColorTrace (5.9s)
+✔ [8996/9051] Built OAI.MathematicalPhysics.Heisenberg.PinnedColors (6.7s)
+✔ [8997/9051] Built OAI.MathematicalPhysics.Heisenberg.PinnedMagnetization (7.1s)
+✔ [8998/9051] Built OAI.MathematicalPhysics.Heisenberg.SurfaceTail (6.1s)
+✔ [8999/9051] Built OAI.MathematicalPhysics.Heisenberg.CutColors (6.3s)
+✔ [9000/9051] Built OAI.MathematicalPhysics.Heisenberg.PinBridge (6.7s)
+✔ [9001/9051] Built OAI.MathematicalPhysics.Heisenberg.RegularPin (6.6s)
+✔ [9002/9051] Built OAI.MathematicalPhysics.Heisenberg.BootstrapMeshBounds (8.4s)
+✔ [9003/9051] Built OAI.MathematicalPhysics.Heisenberg.PeriodicReturnEstimate (21s)
+✔ [9004/9051] Built OAI.MathematicalPhysics.Heisenberg.BootstrapParameters (13s)
+✔ [9005/9051] Built OAI.MathematicalPhysics.Heisenberg.MeshPin (9.2s)
+✔ [9006/9051] Built OAI.MathematicalPhysics.Heisenberg.BoundaryMesh (7.6s)
+✔ [9007/9051] Built OAI.MathematicalPhysics.Heisenberg.MeshSurface (6.9s)
+✔ [9008/9051] Built OAI.MathematicalPhysics.Heisenberg.MeshProduct (5.7s)
+✔ [9009/9051] Built OAI.MathematicalPhysics.Heisenberg.SerialBlocks (5.7s)
+✔ [9010/9051] Built OAI.MathematicalPhysics.Heisenberg.MeshCutProduct (5.7s)
+✔ [9011/9051] Built OAI.MathematicalPhysics.Heisenberg.MeshCompletion (6.1s)
+✔ [9012/9051] Built OAI.MathematicalPhysics.Heisenberg.SlotOnMesh (11s)
+✔ [9013/9051] Built OAI.MathematicalPhysics.Heisenberg.TensorLiftIndex (5.8s)
+✔ [9014/9051] Built OAI.MathematicalPhysics.Heisenberg.MatrixUnitTrace (5.8s)
+✔ [9015/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinTensorRepresentation (10s)
+✔ [9016/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinPhysicalOperators (15s)
+✔ [9017/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinMatrixTrace (16s)
+✔ [9018/9051] Built OAI.MathematicalPhysics.Heisenberg.RectangularExp (6.3s)
+✔ [9019/9051] Built OAI.MathematicalPhysics.Heisenberg.SpectralTransfer (6.0s)
+✔ [9020/9051] Built OAI.MathematicalPhysics.Heisenberg.PhysicalClock (6.3s)
+✔ [9021/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinDirected (15s)
+✔ [9022/9051] Built OAI.MathematicalPhysics.Heisenberg.ExchangeOnMesh (9.8s)
+✔ [9023/9051] Built OAI.MathematicalPhysics.Heisenberg.ColorClockLimit (5.1s)
+✔ [9024/9051] Built OAI.MathematicalPhysics.Heisenberg.MeshMatrixSurface (5.1s)
+✔ [9025/9051] Built OAI.MathematicalPhysics.Heisenberg.PeriodicCount (4.0s)
+✔ [9026/9051] Built OAI.MathematicalPhysics.Heisenberg.MeshRoom (4.5s)
+✔ [9027/9051] Built OAI.MathematicalPhysics.Heisenberg.CompletedSurface (7.5s)
+✔ [9028/9051] Built OAI.MathematicalPhysics.Heisenberg.OnsiteSwaps (4.1s)
+✔ [9029/9051] Built OAI.MathematicalPhysics.Heisenberg.CompletionFactor (5.1s)
+✔ [9030/9051] Built OAI.MathematicalPhysics.Heisenberg.SymmetrizedSurface (5.1s)
+✔ [9031/9051] Built OAI.MathematicalPhysics.Heisenberg.PhysicalSpectral (5.6s)
+✔ [9032/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinMatrixConservation (5.6s)
+✔ [9033/9051] Built OAI.MathematicalPhysics.Heisenberg.FiniteTilt (4.5s)
+✔ [9034/9051] Built OAI.MathematicalPhysics.Heisenberg.MatrixWeights (4.4s)
+✔ [9035/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinField (9.2s)
+✔ [9036/9051] Built OAI.MathematicalPhysics.Heisenberg.PhysicalSurface (4.8s)
+✔ [9037/9051] Built OAI.MathematicalPhysics.Heisenberg.CubeSurface (4.3s)
+✔ [9038/9051] Built OAI.MathematicalPhysics.Heisenberg.PhysicalTilt (6.7s)
+✔ [9039/9051] Built OAI.MathematicalPhysics.Heisenberg.CubeSelection (10s)
+✔ [9040/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinAverage (10s)
+✔ [9041/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinExhaustion (8.0s)
+✔ [9042/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinDeep (3.0s)
+✔ [9043/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinFieldDynamics (7.6s)
+✔ [9044/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinTranslations (6.0s)
+✔ [9045/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinBulk (4.6s)
+✔ [9046/9051] Built OAI.MathematicalPhysics.Heisenberg.FiniteAverage (3.8s)
+✔ [9047/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinCubeAverage (7.5s)
+✔ [9048/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinFieldUniform (7.1s)
+✔ [9049/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinAverageBoundary (11s)
+✔ [9050/9051] Built OAI.MathematicalPhysics.Heisenberg.SpinAveragedKMS (34s)
+✔ [9051/9051] Built OAI.MathematicalPhysics.Heisenberg.Main (12s)
+Build completed successfully (9051 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, OAI.Heisenberg.spontaneous_magnetization, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from OAI.MathematicalPhysics.Heisenberg.Main
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
