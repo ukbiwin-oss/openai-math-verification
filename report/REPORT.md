@@ -70,11 +70,28 @@ A stated headline is not a checked proof. Machine-checked so far, with Comparato
 | FTL713 no percolation at criticality, quasi-transitive | CriticalPercolation | PASS | PASS (825 s) |
 | DOC0275 Laughlin Fock-space gap | LaughlinFock | PASS | PASS (4,109 s) |
 
-All four statements are unchanged at HEAD and this review judged them faithful. No second kernel (nanoda) was run.
-Further Comparator checks of the other challenges judged faithful (367 at the snapshot commit) are running on both
-machines; results accumulate in `~/comparator-replication-20261031/run/summary.csv` (machine-1) and
-`~/comparator-replication-20261030/run{2,3,4}/summary.csv` (laptop). Lee Miller's 10 Oct desk audit flagged families 263
-(ionization: the statement is not N_c ≤ Z + C), 267 (Bose gas: zero temperature only) and 261 (Anderson: spectrum only).
+All four statements are unchanged at HEAD and this review judged them faithful.
+
+**Wider Comparator run (status 1 Nov 2026, 01:30 UTC; still running).** All 367 challenges judged faithful at the
+snapshot commit fd4aeeb2 are being checked on machine-1 (8 streams), machine-2 (laptop)
+(2 streams) and machine-3 (a third replication of 20 quick ones).
+So far **174 of the 367 PASS and none has failed on its merits**; 11 have passed on two or more machines. Three
+environment faults were found and fixed rather than counted:
+- ArtinParabolicIntersections first FAILed because its config enables the second kernel, nanoda, which was not
+  installed; the Lean kernel had accepted it. With nanoda 0.4.31 (built from ammkrn/nanoda_lib 8de7e0c4) both kernels
+  accept it. Only two configs enable nanoda (this one and TraceIdealTransportSupport).
+- 38 laptop checks failed in seconds when its work partition filled up ("no space left on device"). Those rows were
+  removed and re-queued; machine-2 (laptop) now works from a
+  new 512 GB NVMe.
+- One laptop check was interrupted by a USB-drive failure and is re-queued.
+
+**Upstream changes since the snapshot.** At HEAD 4eaee875, 11 challenges changed (Brenier, DefocusingNLS,
+ElementaryPositivity, EuclideanFiveColor, HarmonicGrowth, KServer, LogspaceEquality, Naimark, OccupiedOverlap, Rokhlin,
+SpinAngle) and 2 are new (LocalSmoothing, SubexponentialSAT); these 13 are being checked at HEAD on machine-1; Brenier at HEAD passes. HEAD also adds a large separate formalisation,
+`ComparatorChallenges/HodgeConjectureCMAbelianVarieties/`, not yet examined.
+
+Lee Miller's 10 Oct desk audit flagged families 263 (ionization: the statement is not N_c ≤ Z + C), 267 (Bose gas:
+zero temperature only) and 261 (Anderson: spectrum only).
 
 ## 5. The eight FTL records and the quantum-computing titles
 
@@ -146,3 +163,46 @@ agents (Claude) reading the scope notes, the Comparator challenge files and the 
 reviews and adjudication for priority families; treat its verdicts as a screen for specialists, not expert judgement.
 The reception check searched local holdings first, then the web; every cited source was re-fetched by an independent
 checker. Comparator runs are in `replications/`; see the README there for how to rerun them.
+
+## 8. Independent re-runs of the papers' own computer certificates (1 Nov 2026)
+
+31 manuscripts ship a `verification/` folder with their computer-assisted proof steps. Each folder was fetched from
+openai/math at 4eaee875 (sparse clone; GMP 6.3.0, Boost 1.89, python-flint
+0.9.0, sympy 1.14.0, mpmath 1.3.0 installed per user, no sudo) and run by one agent per paper inside a Landlock sandbox
+(no network, writes only in the run directory), comparing outputs with saved outputs, hashes and the paper's numbers.
+
+| Result | Papers |
+|---|---|
+| Reproduced: every documented check ran and agreed | 29 |
+| Partial: all numbers agree, but the documented command cannot run unmodified | 2 |
+| Mismatch with the paper | 0 |
+
+The two partial cases:
+- *Foulkes conjecture for the sixth symmetric power*: the runner deliberately clears the compiler's include path, so it
+  needs Boost installed system-wide. With a labelled include-path wrapper, both Appendix A and B outputs are
+  byte-identical to the shipped streams.
+- *The Mahler conjecture for general convex bodies*: a genuine upstream gap. `SOURCE-MANIFEST.json`, `saved-original/`
+  and `input.md`, which the README and runner rely on, are not in the repository at any commit. All ten computations
+  agree when run directly.
+
+Per-paper verdicts, what each checker certifies, and the agents' soundness notes (trusted inputs, hand-coded formulas,
+float use) are in `certificate_reruns.csv` (this folder).
+
+## 9. GPU counterexample searches (31 Oct – 1 Nov 2026)
+
+172 physics-flavoured manuscripts were screened for claims a GPU could stress-test; 21 candidates were each reviewed
+by a sceptical agent and all 21 rejected for that purpose (already Lean-checked, already certified exactly, bound far
+from the physical value, existential only, or not GPU-shaped; `gpu-candidates-SHORTLIST.md` in this folder). With the GPUs idle,
+four were run anyway as independent stress tests, each capped at 4 hours, with any hit to be confirmed in exact or
+50-digit arithmetic:
+
+| Record | Claim tested | Machine | Cases | Result |
+|---|---|---|---|---|
+| DOC0632 Potts reconstruction | Prop. 3.1 polynomial inequalities on Δ4×Δ4 | machine-1 RTX 5060 Ti | 15.7 billion pairs | No violation; worst normalised slack 0.0071 / 0.0050 |
+| DOC0437 planar Coulomb energy | Thm 1.2, W_n ≥ n W(E_tri), n = 2–400 | machine-1 RTX 5060 Ti | 377,668 local minima | No violation; closest 3.0e-6 per point (n = 209) |
+| DOC0724 matching-polytope entropy | Thm 1.1 lower bound (the Lean statement is still `sorry`) | laptop RTX 4060 | 25.3 million (so far) | No violation; worst ratio 0.118 (m = 2) |
+| DOC0696 isotropic constant | Thm 1.1, simplex maximises L_K, n = 3–6 | laptop RTX 4060 | 2.2 million polytopes (so far) | No violation; nothing beats the simplex |
+
+Earlier, the entropy photon-number inequality (Comparator challenge EntropyPhotonNumber, which then PASSed) was tested
+with 8.3 million cases on both GPUs with no violation. These searches are evidence, not proof. Code and results are in
+`numerics/`.
