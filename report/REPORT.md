@@ -173,17 +173,18 @@ openai/math at 4eaee875 (sparse clone; GMP 6.3.0, Boost 1.89, python-flint
 
 | Result | Papers |
 |---|---|
-| Reproduced: every documented check ran and agreed | 29 |
-| Partial: all numbers agree, but the documented command cannot run unmodified | 2 |
+| Reproduced: every documented check ran and agreed | 30 |
+| Partial: all numbers agree, but the documented command cannot run unmodified | 1 |
 | Mismatch with the paper | 0 |
 
-The two partial cases:
-- *Foulkes conjecture for the sixth symmetric power*: the runner deliberately clears the compiler's include path, so it
-  needs Boost installed system-wide. With a labelled include-path wrapper, both Appendix A and B outputs are
-  byte-identical to the shipped streams.
+The partial case:
 - *The Mahler conjecture for general convex bodies*: a genuine upstream gap. `SOURCE-MANIFEST.json`, `saved-original/`
   and `input.md`, which the README and runner rely on, are not in the repository at any commit. All ten computations
   agree when run directly.
+
+*Foulkes conjecture for the sixth symmetric power* was partial at first only because its runner clears the compiler's
+include path and Boost was not installed system-wide; with Boost installed it reproduced unmodified (both programs
+match the shipped output byte for byte).
 
 Per-paper verdicts, what each checker certifies, and the agents' soundness notes (trusted inputs, hand-coded formulas,
 float use) are in `certificate_reruns.csv` (this folder).
