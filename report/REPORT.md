@@ -199,10 +199,27 @@ four were run anyway as independent stress tests, each capped at 4 hours, with a
 | Record | Claim tested | Machine | Cases | Result |
 |---|---|---|---|---|
 | DOC0632 Potts reconstruction | Prop. 3.1 polynomial inequalities on Δ4×Δ4 | machine-1 RTX 5060 Ti | 15.7 billion pairs | No violation; worst normalised slack 0.0071 / 0.0050 |
-| DOC0437 planar Coulomb energy | Thm 1.2, W_n ≥ n W(E_tri), n = 2–400 | machine-1 RTX 5060 Ti | 377,668 local minima | No violation; closest 3.0e-6 per point (n = 209) |
-| DOC0724 matching-polytope entropy | Thm 1.1 lower bound (the Lean statement is still `sorry`) | laptop RTX 4060 | 25.3 million (so far) | No violation; worst ratio 0.118 (m = 2) |
-| DOC0696 isotropic constant | Thm 1.1, simplex maximises L_K, n = 3–6 | laptop RTX 4060 | 2.2 million polytopes (so far) | No violation; nothing beats the simplex |
+| DOC0437 planar Coulomb energy | Thm 1.2, W_n ≥ n W(E_tri), n = 2–400 | machine-1 RTX 5060 Ti | 380,237 local minima | No violation; closest 3.0e-6 per point (n = 209) |
+| DOC0724 matching-polytope entropy | Thm 1.1 lower bound (the Lean statement is still `sorry`) | laptop RTX 4060 | 28.0 million cases, 3,244 graphs | No violation; worst ratio 0.118 (m = 2) |
+| DOC0696 isotropic constant | Thm 1.1, simplex maximises L_K, n = 3–6 | laptop RTX 4060 | 2.47 million polytopes, 51.8 million hulls | No violation; nothing beats the simplex |
 
 Earlier, the entropy photon-number inequality (Comparator challenge EntropyPhotonNumber, which then PASSed) was tested
 with 8.3 million cases on both GPUs with no violation. These searches are evidence, not proof. Code and results are in
 `numerics/`.
+
+## 10. Comparator config and Lean file hygiene (1 Nov 2026)
+
+Two read-only scripts (`hygiene/config_audit.py`, `hygiene/empty_files.py` in this repo) were run over the snapshot and HEAD copies.
+
+Comparator configs: no config permits axioms beyond `propext`, `Quot.sound`, `Classical.choice`, and no challenge file
+uses `opaque`, `implemented_by`, `extern` or kernel-skipping options. But at the snapshot, 10 of 416 configs had a
+non-empty `definition_names` list (the solution may replace those constants), one of them (ElementaryPositivity) had an
+empty `theorem_names` list, so Comparator checked no theorem at all, and HarmonicGrowth's challenge file declared an
+`axiom`. At HEAD 4eaee875 all three issues are gone except ElementaryPositivity's single redefinable witness. Nine of
+the ten were rewritten, which is why those challenges changed between the commits. None of these configs were in our
+snapshot replication queue. The "all 416 configurations accepted" figure reported elsewhere therefore includes, at the
+snapshot, one vacuous config and ten weakened ones.
+
+Lean files: of 162,417 `.lean` files under `OAI/` at HEAD, 418 declare nothing. 324 of those are import-only umbrella
+files, which is normal Lean practice; the other 94 are namespace shells with no content (list in
+`hygiene/shell_files_head.txt`), the pattern raised on the Lean Zulip. Harmless to correctness, costly to build time.
