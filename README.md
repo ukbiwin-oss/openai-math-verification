@@ -35,7 +35,7 @@ lean4export v4.34.0, landrun 0.1.17.
 - **It does not mean** the challenge statement says what the paper claims. That needs a person who knows the field. The
   report's statement review (done by AI agents, with second reviews) judged these four statements faithful.
 - The four checks above used Lean's kernel only. A second kernel, nanoda, was later run on the 13 challenges that are
-  new or changed at HEAD `4eaee875`: 12 of 13 pass both kernels so far (report, section 11). All checks trust Mathlib's
+  new or changed at HEAD `4eaee875`: all 13 pass both kernels, on two machines (report, section 11). All checks trust Mathlib's
   definitions.
 - The θ(p_c) = 0 result on ℤ^d was obtained earlier by others (see the report, section 6).
 

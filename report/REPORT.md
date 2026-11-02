@@ -74,8 +74,8 @@ All four statements are unchanged at HEAD and this review judged them faithful.
 
 **Wider Comparator run (completed 2 Nov 2026).** All 367 challenges judged faithful at the snapshot commit fd4aeeb2
 were checked on machine-1, machine-2 (laptop), machine-3 and, from 2 Nov, machine-4. **367 of 367 PASS; none failed on
-its merits.** By 02:00 UTC on 2 Nov, 146 had passed on two or more machines and 45 on three (machines 3 and 4 keep
-re-confirming the quicker ones). Three environment faults were found and fixed rather than counted:
+its merits.** By 10:15 UTC on 2 Nov at least 174 had passed on two or more machines and over 125 on three
+(machines 3 and 4 keep re-confirming the quicker ones; machine-2 is taking the slowest). Three environment faults were found and fixed rather than counted:
 - ArtinParabolicIntersections first FAILed because its config enables the second kernel, nanoda, which was not
   installed; the Lean kernel had accepted it. With nanoda 0.4.31 (built from ammkrn/nanoda_lib 8de7e0c4) both kernels
   accept it. Only two configs enable nanoda (this one and TraceIdealTransportSupport).
@@ -87,8 +87,8 @@ re-confirming the quicker ones). Three environment faults were found and fixed r
 **Upstream changes since the snapshot.** At HEAD 4eaee875, 11 challenges changed (Brenier, DefocusingNLS,
 ElementaryPositivity, EuclideanFiveColor, HarmonicGrowth, KServer, LogspaceEquality, Naimark, OccupiedOverlap, Rokhlin,
 SpinAngle) and 2 are new (LocalSmoothing, SubexponentialSAT). **All 13 PASS at HEAD** on machine-1 (longest:
-ElementaryPositivity 12,481 s, SubexponentialSAT 10,163 s, LocalSmoothing 8,478 s), and 12 of the 13 also pass the
-second kernel (section 11). An independent replication of the 13 on machine-2 is in progress (8 of 13 passed so far).
+ElementaryPositivity 12,481 s, SubexponentialSAT 10,163 s, LocalSmoothing 8,478 s). **An independent replication on
+machine-2 also passes all 13**, and all 13 pass the second kernel, nanoda, on both machines (section 11).
 HEAD also adds a large separate formalisation, `ComparatorChallenges/HodgeConjectureCMAbelianVarieties/`, whose
 statement is reviewed in section 12.
 
@@ -231,10 +231,14 @@ files, which is normal Lean practice; the other 94 are namespace shells with no 
 
 Upstream enables the second kernel, nanoda, in only 2 of 416 configs; the 13 HEAD configs have `enable_nanoda: false`.
 We re-ran each with a work-directory copy of its config that sets `enable_nanoda: true` (upstream files untouched;
-nanoda 0.4.31 from ammkrn/nanoda_lib 8de7e0c4, the build used in section 4). Both kernels accept 12 of the 13:
+nanoda 0.4.31 from ammkrn/nanoda_lib 8de7e0c4, the build used in section 4). Both kernels accept all 13, on machine-1 and again on machine-2:
 LocalSmoothing (4,623 s), Brenier, KServer, EuclideanFiveColor, HarmonicGrowth, Naimark, DefocusingNLS,
 ElementaryPositivity, SpinAngle, OccupiedOverlap, Rokhlin (99–472 s each, builds cached) and LogspaceEquality (177 s,
-see below). SubexponentialSAT's second-kernel run is queued.
+see below) and SubexponentialSAT (1,489 s and 1,579 s, see below). The "Exponential Time Hypothesis is false"
+formalisation is therefore accepted by two independent kernels on two machines.
+
+A second-kernel pass over the 367 snapshot challenges began on 2 Nov (upstream enables nanoda for only 2 of them); 21
+checked so far, all accepted by both kernels.
 
 Two first attempts ended differently: for SubexponentialSAT (after 1,405 s) and LogspaceEquality (156 s) nanoda aborted
 with "thread has overflowed its stack" (exit code 134) while the Lean kernel accepted the same export in the same run.
@@ -243,7 +247,7 @@ generated config omits the field. This is a resource limit of the second kernel 
 rejection, though Comparator records it as FAIL. Comparator's sandbox lets only the kernel binary itself execute, so a
 wrapper script cannot raise the limit; we rebuilt nanoda from the same source with that one default changed to 1 GiB
 (`hygiene/nanoda-bigstack-util.rs.diff`) and selected it through Comparator's own `COMPARATOR_NANODA` override,
-Comparator unmodified. LogspaceEquality then passes nanoda. Anyone running these two proofs through nanoda will need
+Comparator unmodified. LogspaceEquality and SubexponentialSAT then pass nanoda. Anyone running these two proofs through nanoda will need
 the same setting.
 
 ## 12. The CM Hodge challenge: statement review (2 Nov 2026)
