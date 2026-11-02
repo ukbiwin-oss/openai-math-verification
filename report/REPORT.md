@@ -72,11 +72,10 @@ A stated headline is not a checked proof. Machine-checked so far, with Comparato
 
 All four statements are unchanged at HEAD and this review judged them faithful.
 
-**Wider Comparator run (status 1 Nov 2026, 01:30 UTC; still running).** All 367 challenges judged faithful at the
-snapshot commit fd4aeeb2 are being checked on machine-1 (8 streams), machine-2 (laptop)
-(2 streams) and machine-3 (a third replication of 20 quick ones).
-So far **174 of the 367 PASS and none has failed on its merits**; 11 have passed on two or more machines. Three
-environment faults were found and fixed rather than counted:
+**Wider Comparator run (completed 2 Nov 2026).** All 367 challenges judged faithful at the snapshot commit fd4aeeb2
+were checked on machine-1, machine-2 (laptop), machine-3 and, from 2 Nov, machine-4. **367 of 367 PASS; none failed on
+its merits.** By 02:00 UTC on 2 Nov, 146 had passed on two or more machines and 45 on three (machines 3 and 4 keep
+re-confirming the quicker ones). Three environment faults were found and fixed rather than counted:
 - ArtinParabolicIntersections first FAILed because its config enables the second kernel, nanoda, which was not
   installed; the Lean kernel had accepted it. With nanoda 0.4.31 (built from ammkrn/nanoda_lib 8de7e0c4) both kernels
   accept it. Only two configs enable nanoda (this one and TraceIdealTransportSupport).
@@ -87,8 +86,11 @@ environment faults were found and fixed rather than counted:
 
 **Upstream changes since the snapshot.** At HEAD 4eaee875, 11 challenges changed (Brenier, DefocusingNLS,
 ElementaryPositivity, EuclideanFiveColor, HarmonicGrowth, KServer, LogspaceEquality, Naimark, OccupiedOverlap, Rokhlin,
-SpinAngle) and 2 are new (LocalSmoothing, SubexponentialSAT); these 13 are being checked at HEAD on machine-1; Brenier at HEAD passes. HEAD also adds a large separate formalisation,
-`ComparatorChallenges/HodgeConjectureCMAbelianVarieties/`, not yet examined.
+SpinAngle) and 2 are new (LocalSmoothing, SubexponentialSAT). **All 13 PASS at HEAD** on machine-1 (longest:
+ElementaryPositivity 12,481 s, SubexponentialSAT 10,163 s, LocalSmoothing 8,478 s), and 12 of the 13 also pass the
+second kernel (section 11). An independent replication of the 13 on machine-2 is in progress (8 of 13 passed so far).
+HEAD also adds a large separate formalisation, `ComparatorChallenges/HodgeConjectureCMAbelianVarieties/`, whose
+statement is reviewed in section 12.
 
 Lee Miller's 10 Oct desk audit flagged families 263 (ionization: the statement is not N_c ≤ Z + C), 267 (Bose gas:
 zero temperature only) and 261 (Anderson: spectrum only).
@@ -224,3 +226,69 @@ snapshot, one vacuous config and ten weakened ones.
 Lean files: of 162,417 `.lean` files under `OAI/` at HEAD, 418 declare nothing. 324 of those are import-only umbrella
 files, which is normal Lean practice; the other 94 are namespace shells with no content (list in
 `hygiene/shell_files_head.txt`), the pattern raised on the Lean Zulip. Harmless to correctness, costly to build time.
+
+## 11. The 13 HEAD challenges on a second kernel, and a nanoda stack limit (2 Nov 2026)
+
+Upstream enables the second kernel, nanoda, in only 2 of 416 configs; the 13 HEAD configs have `enable_nanoda: false`.
+We re-ran each with a work-directory copy of its config that sets `enable_nanoda: true` (upstream files untouched;
+nanoda 0.4.31 from ammkrn/nanoda_lib 8de7e0c4, the build used in section 4). Both kernels accept 12 of the 13:
+LocalSmoothing (4,623 s), Brenier, KServer, EuclideanFiveColor, HarmonicGrowth, Naimark, DefocusingNLS,
+ElementaryPositivity, SpinAngle, OccupiedOverlap, Rokhlin (99–472 s each, builds cached) and LogspaceEquality (177 s,
+see below). SubexponentialSAT's second-kernel run is queued.
+
+Two first attempts ended differently: for SubexponentialSAT (after 1,405 s) and LogspaceEquality (156 s) nanoda aborted
+with "thread has overflowed its stack" (exit code 134) while the Lean kernel accepted the same export in the same run.
+nanoda sizes each checking thread's stack from the config field `stack_size_bytes`, default 32 MiB, and Comparator's
+generated config omits the field. This is a resource limit of the second kernel on very deep proof terms, not a
+rejection, though Comparator records it as FAIL. Comparator's sandbox lets only the kernel binary itself execute, so a
+wrapper script cannot raise the limit; we rebuilt nanoda from the same source with that one default changed to 1 GiB
+(`hygiene/nanoda-bigstack-util.rs.diff`) and selected it through Comparator's own `COMPARATOR_NANODA` override,
+Comparator unmodified. LogspaceEquality then passes nanoda. Anyone running these two proofs through nanoda will need
+the same setting.
+
+## 12. The CM Hodge challenge: statement review (2 Nov 2026)
+
+HEAD adds `ComparatorChallenges/HodgeConjectureCMAbelianVarieties/`: a 257-file statement framework (adapted from
+Paul-Lez/HodgeConjecture and deancureton/sphere-six-complex), the CM hypothesis (`CM.lean`), the challenge theorem
+`HodgeCM.hodge_conjecture_for_cm_abelian_varieties`, and a one-line solution importing OpenAI's ~300k-line proof. The
+paper is "The rational Hodge conjecture for CM abelian varieties" (6 Oct 2026). Its headline is an open conjecture whose
+truth implies the Tate conjecture for abelian varieties over finite fields and the Hodge standard conjecture for abelian
+varieties, so the statement was reviewed with maximal suspicion: six independent agent reviews (paper against Lean,
+every definition traced, the `IsProjective` question and Comparator's mechanics, a smuggling sweep of the framework and
+of the proof's 33,169-module import closure, vacuity, proof structure), each finding then attacked by three sceptical
+verifiers; full text in `review/HODGE_STATEMENT_REVIEW.md`, key facts re-checked by hand against the files.
+
+Verdict: **faithful with caveats.** The Lean statement is the paper's Theorem 1.1 clause by clause: a complex abelian
+variety (`IsIntegral`, `Smooth`, `IsProjective`, `GrpObj` over `Spec ℂ`, the point included), the CM hypothesis in the
+paper's Lemma 2.3(ii) form (rational H¹ a sum of rank-one lines over CM fields acting by Hodge endomorphisms), and the
+conclusion that `Hdg^p(X; ℚ)` lies in the ℚ-span of fundamental classes of codimension-p integral subvarieties. `Hdg^p`
+is the textbook F^p ∩ conj(F^p); the cycle span cannot contain anything outside the image of Z^p(X)_ℚ; no hypothesis is
+unsatisfiable or satisfied by non-CM varieties. The sweep found no `axiom`, `sorry`, `opaque`, `implemented_by`,
+`extern`, `unsafe`, `partial def` or `native_decide`, no unconditional instance of any hypothesis class, and no lemma
+deriving `False` or a trivial Hodge space from the hypotheses.
+
+Caveats: (a) the CM hypothesis is the (ii) form; (ii) ⇔ (iii) is the paper's Lemma 2.3, not a Lean theorem. (b) The
+holomorphic-forms sheaf behind F^p is built by an unusual route, identified with the standard one by lemmas but not by
+one named theorem. (c) No object satisfying all four instance hypotheses is constructed in either tree. (d) **The
+challenge side is solver-authored**: upstream commit `204e5f8` (29 Oct 2026, "Align CM Hodge comparator declarations
+with the Lean solution") rewrote all 257 framework files into `OAI.*` namespaces matching the solution, so Comparator's
+assumption that the challenge closure is controlled by an independent party is met only by reading it, which this review
+does. A PASS therefore means the kernel accepted OpenAI's proof of OpenAI's formalisation, and the burden moves to the
+framework definitions and the proof tree. Minor: about ten textual divergences between the framework and OpenAI's twin
+modules, all of which can only make Comparator fail, never pass a weaker statement; and one stale docstring
+(`CMCore.lean`) says a key claim is unproved when `CMReduction/Core.lean` proves it.
+
+Kevin Buzzard's question on the Lean Zulip was whether the challenge's `IsProjective` and the solution's might differ.
+Both use `OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective`, declared once in each tree (the trees are
+never loaded together); the two declarations differ only by `_root_.` qualification. Comparator does not rely on names:
+`Compare.lean` walks every constant reachable from the statement and throws "Const does not match" on any structural
+difference, and `definition_names` is empty for this challenge, so a differing `IsProjective` would make the run FAIL;
+it cannot make it PASS with a weaker statement.
+
+Comparator run: started 1 Nov 23:48 UTC on machine-1 after a 42,093-job build (the build needs `LEAN_NUM_THREADS`
+capped; Comparator's sandbox drops that variable, and 17 parallel Lean jobs took about 75 GB and were killed on earlier
+attempts); the kernel check was in progress at the time of writing, with no verdict yet. Open questions for a human
+expert are ranked in the review: whether the chart-evaluation holomorphic-forms sheaf is Ω^p after sheafification;
+whether the transported conjugation is geometric complex conjugation; whether the cycle component class equals [Z] up to
+a nonzero scalar for singular Z; whether `analyticTopology` is the classical topology; and, if the run passes, the
+proof-internal definitions behind Hironaka resolution, Lefschetz (1,1) and the theta/ball-quotient construction.

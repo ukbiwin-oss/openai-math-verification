@@ -1,0 +1,11 @@
+--- a/src/util.rs (upstream 8de7e0c4)	2026-10-31 20:29:32.225133428 +0000
++++ b/src/util.rs (1 GiB stack)	2026-11-02 00:44:50.538405476 +0000
+@@ -27,7 +27,7 @@
+ 
+ pub(crate) const fn default_true() -> bool { true }
+ 
+-pub(crate) const fn default_stack_size_bytes() -> usize { 32 * 1024 * 1024 }
++pub(crate) const fn default_stack_size_bytes() -> usize { 1024 * 1024 * 1024 } // 2026-11-02 audit: 1 GiB default (was 32 MiB); only change vs upstream 8de7e0c4
+ 
+ pub(crate) type UniqueIndexSet<A> = IndexSet<A, BuildHasherDefault<UniqueHasher>>;
+ pub(crate) type FxIndexSet<A> = IndexSet<A, BuildHasherDefault<FxHasher>>;

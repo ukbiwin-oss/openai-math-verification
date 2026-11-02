@@ -34,7 +34,9 @@ lean4export v4.34.0, landrun 0.1.17.
 - **It means** the Lean kernel accepted a proof of exactly the challenge statement, using only the permitted axioms.
 - **It does not mean** the challenge statement says what the paper claims. That needs a person who knows the field. The
   report's statement review (done by AI agents, with second reviews) judged these four statements faithful.
-- **No second kernel** (for example nanoda) has been run, and the checks trust Lean's kernel and Mathlib's definitions.
+- The four checks above used Lean's kernel only. A second kernel, nanoda, was later run on the 13 challenges that are
+  new or changed at HEAD `4eaee875`: 12 of 13 pass both kernels so far (report, section 11). All checks trust Mathlib's
+  definitions.
 - The θ(p_c) = 0 result on ℤ^d was obtained earlier by others (see the report, section 6).
 
 ## Report
