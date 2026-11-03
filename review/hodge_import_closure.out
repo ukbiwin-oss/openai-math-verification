@@ -1,0 +1,10 @@
+ 33170  (workspace)
+  8530  mathlib
+   192  batteries
+   132  aesop
+    14  Qq
+    13  proofwidgets
+    13  plausible
+    10  importGraph
+     4  LeanSearchClient
+unresolved (non-core): 1 ['statements']

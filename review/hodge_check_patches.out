@@ -1,0 +1,43 @@
+ok   AINTLIB                        patch 158 files, 158 changed
+ok   AbsorptionCutoff               patch 4 files, 4 changed
+ok   BibtexQuery                    no patch, 0 changed
+ok   ClassFieldTheory               patch 80 files, 80 changed
+ok   Cli                            no patch, 0 changed
+ok   LeanArchitect                  no patch, 0 changed
+ok   LeanSearchClient               no patch, 0 changed
+ok   MD4Lean                        no patch, 0 changed
+ok   PrimeCert                      no patch, 0 changed
+ok   PrimeNumberTheoremAnd          patch 55 files, 55 changed
+ok   Qq                             no patch, 0 changed
+ok   SphereEversion                 patch 2 files, 2 changed
+ok   StrongPNT                      patch 10 files, 10 changed
+ok   TauCeti                        no patch, 0 changed
+ok   UnicodeBasic                   no patch, 0 changed
+ok   Zeta3Irrational                patch 11 files, 11 changed
+ok   aesop                          no patch, 0 changed
+ok   batteries                      no patch, 0 changed
+ok   belyi                          patch 15 files, 15 changed
+ok   carleson                       patch 29 files, 29 changed
+ok   checkdecls                     no patch, 0 changed
+ok   doc-gen4                       no patch, 0 changed
+ok   elliptic-curves                patch 22 files, 22 changed
+ok   fixed-point-theorems           patch 7 files, 7 changed
+ok   formal-schemes                 patch 5 files, 5 changed
+ok   genl                           patch 3 files, 3 changed
+ok   gromov                         patch 63 files, 63 changed
+ok   heights                        patch 17 files, 17 changed
+ok   importGraph                    no patch, 0 changed
+ok   iut                            patch 29 files, 29 changed
+ok   leancert                       no patch, 0 changed
+ok   leansqlite                     no patch, 0 changed
+ok   mathlib                        no patch, 0 changed
+ok   oka                            patch 87 files, 87 changed
+ok   orbicurve-cores                patch 26 files, 26 changed
+ok   pi1                            patch 19 files, 19 changed
+ok   plausible                      no patch, 0 changed
+ok   proofwidgets                   no patch, 0 changed
+ok   rellich-kondrachov             patch 15 files, 15 changed
+ok   schoenflies-lean               patch 68 files, 68 changed
+ok   tate-curves-theta              patch 3 files, 3 changed
+ok   tempered-fundamental-groups    patch 6 files, 6 changed
+packages with problems: 0

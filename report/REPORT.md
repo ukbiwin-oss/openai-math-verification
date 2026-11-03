@@ -296,3 +296,18 @@ expert are ranked in the review: whether the chart-evaluation holomorphic-forms 
 whether the transported conjugation is geometric complex conjugation; whether the cycle component class equals [Z] up to
 a nonzero scalar for singular Z; whether `analyticTopology` is the classical topology; and, if the run passes, the
 proof-internal definitions behind Hironaka resolution, Lefschetz (1,1) and the theta/ball-quotient construction.
+
+**Update, 3 Nov 2026: PASS.** The final run started on 2 Nov at 20:39 UTC, after a restart on the new CPU, and ended on
+3 Nov at 21:25:56 UTC with exit code 0. It took 24 h 46 min, mostly the single-threaded kernel check. The log ends
+"Lean default kernel accepts the solution / Your solution is okay!", and its peak memory was 39.9 GB plus 8 GB of swap.
+Only Lean's default kernel checked the proof, because the challenge sets `enable_nanoda: false`.
+
+The build log's "has local changes" warnings for 24 dependency repositories were checked separately. They are
+upstream's own `lean/patches/*-lean4341.patch`, which upstream's lakefile applies. Every one is applied exactly as
+published, with no other edits, and each package is at its pinned commit. None of the patched packages is in the
+proof's import closure, which reaches only mathlib, batteries, aesop, Qq, proofwidgets, plausible, importGraph and
+LeanSearchClient. Details, scripts and outputs: `review/HODGE_COMPARATOR_RESULT.md`. Log:
+`replications/machine-1-2026-11-02-hodge/`.
+
+The PASS means the kernel accepted OpenAI's proof of OpenAI's formalisation, which the statement review found faithful
+with caveats. The expert questions above, including the proof-internal definitions, are now the open work.

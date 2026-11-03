@@ -1,5 +1,7 @@
 # Statement review: `HodgeCM.hodge_conjecture_for_cm_abelian_varieties`
 
+> **Update, 3 Nov 2026:** the Comparator run has finished with a **PASS** (exit 0, 24 h 46 min, default kernel). See `HODGE_COMPARATOR_RESULT.md`. The text below is the 2 Nov review, unchanged.
+
 Challenge `HodgeConjectureCMAbelianVarieties` from github.com/openai/math (HEAD 4eaee875, 30 Oct 2026), audited read-only on machine-1, 2 Nov 2026. Work tree: a local copy of upstream `lean/`. Abbreviations: CH = `ComparatorChallenges/HodgeConjectureCMAbelianVarieties/`, FW = `CH/HodgeConjecture/` (the 257-file statement framework), OAI = `OAI/AlgebraicGeometry/`, CMP = `<local path>`. Mathlib is commit d13f23b7 under `.lake/packages/mathlib/`. The paper is cited by line number of the `pdftotext -layout` dump at `/tmp/hodgecm_paper.txt` (October 6 version); the September 30 version has the same Theorem 1.1 and CM definition.
 
 Six lenses (paper-vs-Lean, definitions, IsProjective-and-Comparator, smuggling, vacuity, proof-structure) produced candidate findings; each was then checked by three verifiers against the files. This document reports what survived, what was refuted, and what was verified directly for this write-up.
