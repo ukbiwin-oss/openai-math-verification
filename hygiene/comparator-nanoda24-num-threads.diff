@@ -1,0 +1,20 @@
+diff --git a/Main.lean b/Main.lean
+index 8560511..a659b1f 100644
+--- a/Main.lean
++++ b/Main.lean
+@@ -161,7 +161,7 @@ def runExternalKernel (kernelName : String) (kernelCommand : Array String)
+       ("export_file_path", solutionPath.toString),
+       ("permitted_axioms", .arr <| legalAxioms.map (.str ∘ Lean.Name.toString)),
+       ("unpermitted_axiom_hard_error", true),
+-      ("num_threads", 4),
++      ("num_threads", 24),  -- 2026-11-03 audit copy: was 4 (only change vs v4.34.0 d03acab1)
+       ("nat_extension", true),
+       ("string_extension", true),
+     ]
+diff --git a/lean-toolchain b/lean-toolchain
+index 12359f9..ba8ebf2 100644
+--- a/lean-toolchain
++++ b/lean-toolchain
+@@ -1 +1 @@
+-leanprover/lean4:v4.34.0
++leanprover/lean4:v4.34.1

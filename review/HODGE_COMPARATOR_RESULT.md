@@ -1,4 +1,4 @@
-# Comparator result: `HodgeConjectureCMAbelianVarieties` (3 Nov 2026)
+# Comparator result: `HodgeConjectureCMAbelianVarieties` (3 Nov 2026; second kernel 4 Nov)
 
 ## Verdict
 
@@ -18,8 +18,8 @@ The last log lines are `Running Lean default kernel on solution.`, `Lean default
 `replications/machine-1-2026-11-02-hodge/`.
 
 **Tools.** Lean 4.34.1, mathlib `d13f23b7`, comparator `d03acab1` (v4.34.0), lean4export `076e8e57`, landrun 0.1.17.
-`enable_nanoda` is `false` in the challenge's `main.json`, so only Lean's default kernel checked the proof. No second
-kernel was run.
+`enable_nanoda` is `false` in the challenge's `main.json`, so in this run only Lean's default kernel checked the proof.
+A second-kernel run followed on 4 Nov (next section).
 
 **What Comparator certifies.** `Solution.lean` proves `HodgeCM.hodge_conjecture_for_cm_abelian_varieties` exactly as
 stated in `Challenge.lean`. Every constant reachable from the statement is structurally identical in the challenge
@@ -32,6 +32,36 @@ kernel accepts the proof.
 of OpenAI's formalisation. Its ranked open questions for a human expert stand. Now that the run has passed, the
 proof-internal definitions it names also need expert reading: Hironaka resolution, Lefschetz (1,1), and the
 theta/ball-quotient construction.
+
+## Second kernel: nanoda (4 Nov 2026)
+
+**PASS on both kernels.** Comparator was run again on machine-1 against the same work tree, with a work-directory copy
+of the config, `main.nanoda.json`. It is upstream's `main.json` with `enable_nanoda` set to `true`; upstream files are
+untouched. Comparator then checks the solution export with nanoda first and Lean's default kernel second.
+
+| | |
+|---|---|
+| Started | 2026-11-03 22:30:27 UTC |
+| Finished | 2026-11-04 22:19:34 UTC |
+| Wall-clock time | 85,747 s (23 h 49 min); the build was cached from the first run |
+| Exit code | 0 |
+| Peak memory (systemd unit) | 55.7 GB RAM, plus 7.3 GB in swap |
+
+The log ends `Running nanoda kernel on solution`, `nanoda kernel accepts the solution`, `Running Lean default kernel on
+solution.`, `Lean default kernel accepts the solution`, `Your solution is okay!`. The exported axioms are again only
+`propext`, `Quot.sound` and `Classical.choice`. The log, summary and versions are in
+`replications/machine-1-2026-11-03-hodge-nanoda/`.
+
+Differences from the first run. All of them concern resources or config, not the check itself:
+- **Config:** `enable_nanoda: true` (the only field changed).
+- **nanoda:** 0.4.31 from ammkrn/nanoda_lib `8de7e0c4`, the same 1 GiB-default-stack build used for every other nanoda
+  pass (`hygiene/nanoda-bigstack-util.rs.diff`, report section 11), selected through `COMPARATOR_NANODA`.
+- **Comparator:** v4.34.0 `d03acab1`, with nanoda's `num_threads` raised from 4 to 24 in the kernel-config JSON it
+  generates. That is the only source change: `hygiene/comparator-nanoda24-num-threads.diff`. The diff's other line is
+  `lean-toolchain` v4.34.0 → v4.34.1, which the first run's Comparator build also has.
+
+The build log shows the same 24 "has local changes" warnings as the first run, line for line. The section below covers
+them.
 
 ## The "has local changes" warnings
 
@@ -61,7 +91,5 @@ applied exactly as published and play no part in the Hodge proof. They do not af
 
 ## Not done
 
-- No second kernel (nanoda) check. The challenge disables it, and a separate nanoda run earlier took about 24 minutes
-  but did not compare statements, so it is not a verdict.
 - No human-expert review of the framework or the proof-internal definitions.
 - No independent second-machine replication of this challenge.

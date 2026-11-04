@@ -311,3 +311,10 @@ LeanSearchClient. Details, scripts and outputs: `review/HODGE_COMPARATOR_RESULT.
 
 The PASS means the kernel accepted OpenAI's proof of OpenAI's formalisation, which the statement review found faithful
 with caveats. The expert questions above, including the proof-internal definitions, are now the open work.
+
+**Update, 4 Nov 2026: second kernel PASS.** We ran Comparator again with a work-directory copy of the config that sets
+`enable_nanoda: true`, using the same nanoda build as section 11 and nanoda's `num_threads` raised from 4 to 24 (the only
+Comparator source change, `hygiene/comparator-nanoda24-num-threads.diff`). The run started on 3 Nov at 22:30 UTC and
+ended on 4 Nov at 22:19:34 UTC with exit code 0, after 23 h 49 min. Its peak memory was 55.7 GB plus 7.3 GB of swap.
+nanoda and Lean's default kernel both accept the solution. Log: `replications/machine-1-2026-11-03-hodge-nanoda/`;
+details in `review/HODGE_COMPARATOR_RESULT.md`. There is still no second-machine replication of this challenge.
