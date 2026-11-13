@@ -9,7 +9,7 @@ September–October 2026 release of AI-generated mathematics manuscripts with Le
 
 | Folder | Contents |
 |---|---|
-| `replications/` | **Comparator replications** of four Lean challenges on two machines, with exact tool versions and logs |
+| `replications/` | **Comparator replications** of four Lean challenges on two machines, with exact tool versions and logs; since 13 Nov 2026 also the second-kernel logs for the two "ETH is false" formalisations (see below) |
 | `scripts/` | The run script used for every replication |
 | `report/` | The full verification report and `papers.csv`, one row per manuscript |
 
@@ -38,6 +38,26 @@ lean4export v4.34.0, landrun 0.1.17.
   new or changed at HEAD `4eaee875`: all 13 pass both kernels, on two machines (report, section 11). All checks trust Mathlib's
   definitions.
 - The θ(p_c) = 0 result on ℤ^d was obtained earlier by others (see the report, section 6).
+
+## The two "Exponential Time Hypothesis is false" formalisations on two kernels (13 Nov 2026)
+
+OpenAI and Anthropic each published a Lean formalisation of a claimed refutation of the Exponential Time Hypothesis in
+late October 2026. Both are accepted by Lean's kernel and by the independent nanoda kernel, with only the three
+standard axioms:
+
+| Formalisation | Commit | Result | Logs |
+|---|---|---|---|
+| OpenAI, `SubexponentialSAT` challenge | openai/math `4eaee875` | Both kernels accept, on two machines (2 Nov 2026; 1,489 s and 1,579 s with builds cached). nanoda needed its thread stack raised from 32 MiB to 1 GiB; the first attempt overflowed and is kept. | `replications/machine-1-2026-11-02-sat-nanoda/`, `replications/machine-2-2026-11-02-sat-nanoda/` |
+| Anthropic, `eth/` | anthropics/formal-math `16a5ce41` | Both kernels accept in three of four runs on one machine (13 Nov 2026), using the repository's own check script unmodified. The first run ended when Comparator crashed with a segmentation fault at the nanoda step, before either kernel gave a verdict; it did not happen again, with a cold or a cached build, and its cause is not known. | `replications/anthropic-formal-math-eth-machine-1-2026-11-13/` |
+
+For the OpenAI run the work copy's commit was not recorded at the time. On 13 Nov 2026 all 3,977 files of the proof
+tree, the challenge file and its config, `lean-toolchain`, `lake-manifest.json` and `lakefile.lean` were compared by
+git blob hash with upstream at `4eaee875`: all identical. The second machine's copy no longer has its work tree, so
+that comparison was made on machine 1 only.
+
+As everywhere in this repository, a pass says that the kernels accepted a proof of the stated theorem. It does not
+say that the stated theorem means "ETH is false"; that is a question about the statements, which this check does not
+address.
 
 ## Report
 

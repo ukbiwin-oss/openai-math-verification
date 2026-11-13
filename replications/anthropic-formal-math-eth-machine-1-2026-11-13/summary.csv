@@ -1,0 +1,5 @@
+run,exit_code,verdict,seconds_total,seconds_check,cgroup_peak_GB,stack_limit,build,note
+1,1,CRASH,346,292,26.7,8192 kB (default),cold: tools and project built in this run,Comparator exited with status 139 (segmentation fault) after printing "Running nanoda kernel on solution"; no kernel verdict
+2,0,PASS,153,152,3.0,unlimited,cached,both kernels accept
+3,0,PASS,157,155,3.0,8192 kB (default),cached,both kernels accept
+4,0,PASS,298,297,10.3,8192 kB (default),cold: project rebuilt (Mathlib and tools cached),both kernels accept

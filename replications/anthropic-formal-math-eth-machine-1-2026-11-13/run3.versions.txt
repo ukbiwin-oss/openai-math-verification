@@ -1,0 +1,11 @@
+date: Fri 13 Nov 00:38:08 UTC 2026
+host: machine-1, kernel 7.0.0-43-generic
+repository: anthropics/formal-math 16a5ce41304fcdaea4e0be7c132e1c361dc26da5
+toolchain file: leanprover/lean4:v4.33.1
+lean: Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+lake: Lake version 5.0.0-src+819816b (Lean version 4.33.1)
+go: go version go1.26.9 linux/amd64
+cargo: cargo 1.99.1 (5f94df478 2026-08-27)
+jq: jq-1.8.1
+stack limit (ulimit -s): 8192
+tool pins: see the head of .github/scripts/comparator-check.sh; lean4export commit is printed in comparator-check.log

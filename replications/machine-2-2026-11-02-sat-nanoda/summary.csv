@@ -1,0 +1,2 @@
+challenge,exit_code,verdict,start_utc,end_utc,seconds
+SubexponentialSAT.nanoda,0,PASS,2026-11-02T06:35:14Z,2026-11-02T07:01:33Z,1579
